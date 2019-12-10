@@ -32,7 +32,7 @@ func (s *EventHandlerSuite) TestMappedEvents() {
 		AggregateType:    "Bar",
 		AggregateVersion: 1,
 		Payload:          "{}",
-		Created:          time.Unix(0, 0),
+		Created:          time.Unix(0, 0).UTC(),
 	}
 
 	b, err := json.Marshal(event)
