@@ -56,11 +56,11 @@ func EventHandler(eventMap EventMap) kinesisEventHandler {
 		start := time.Now().UnixNano()
 
 		err = handler(event)
-		msg := "Processed event"
+		msg := "Consumed event"
 		logContext := log.Info()
 
 		if err != nil {
-			msg = "Failed processing event"
+			msg = "Failed consuming event"
 			logContext = log.Error().Err(err)
 		}
 
